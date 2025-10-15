@@ -1,11 +1,43 @@
 {
-  "timestamp": "October 15, 2025 \u2013 2:00 PM CT",
+  "timestamp": "October 15, 2025 \u2013 02:15 PM CT",
   "criteria": [
     "Popularity (30%) \u2013 adoption & sentiment",
     "Performance (25%) \u2013 reasoning / realism / accuracy",
     "Cost (15%) \u2013 affordability & scalability",
     "Privacy (15%) \u2013 data handling & likeness protection",
     "Innovation (15%) \u2013 multimodal capability & ecosystem growth"
+  ],
+  "news": [
+    {
+      "title": "OpenAI releases Sora 2 (video+audio)",
+      "date": "Sep 30, 2025",
+      "summary": "More accurate physics, sharper realism, synchronized dialogue and sound effects; improved steerability.",
+      "url": "https://openai.com/index/sora-2/"
+    },
+    {
+      "title": "OpenAI Realtime API updates for voice agents",
+      "date": "Aug 28, 2025",
+      "summary": "New speech-to-speech model, MCP server support, image input, and SIP phone calling.",
+      "url": "https://openai.com/index/introducing-gpt-realtime/"
+    },
+    {
+      "title": "Gemini API: 2.5 Computer Use Preview + 2.5 Flash Image GA",
+      "date": "Oct 7, 2025",
+      "summary": "Google expands multimodal developer features including computer control and image generation.",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "title": "Anthropic: context management + memory (Sonnet 4.5 era)",
+      "date": "Sep 29, 2025",
+      "summary": "Claude platform adds context editing and a memory tool for longer-running tasks.",
+      "url": "https://www.anthropic.com/news/context-management"
+    },
+    {
+      "title": "DeepMind Veo updates toward longer video",
+      "date": "Oct 2025",
+      "summary": "New Veo versions aim for multi-shot, longer durations, and improved character consistency.",
+      "url": "https://deepmind.google/models/veo/"
+    }
   ],
   "categories": [
     {
@@ -75,7 +107,7 @@
           "tool": "Veo 2 (Google DeepMind)",
           "bestFor": "Enterprise video generation, film pre-viz",
           "whatsNew": "Adds 4K output & motion blur control",
-          "highlights": "Pro: 4K quality & motion fidelity. Con: Expensive; limited access."
+          "highlights": "Pro: 4K quality & motion fidelity. Con: Expensive, limited access."
         },
         {
           "rank": "3rd",
