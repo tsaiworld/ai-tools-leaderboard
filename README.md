@@ -27,4 +27,13 @@ This repo includes a workflow that runs **daily at 14:00 UTC** (≈ 9:00 AM CT) 
 
 ---
 
+---
+
+### 🔄 Re-publish Site
+Need to rebuild or redeploy the leaderboard manually?  
+Click below to trigger a fresh GitHub Pages deployment:
+
+[![Re-publish Site](https://img.shields.io/badge/Re--publish%20Site-Trigger%20Deploy-blue?style=for-the-badge&logo=github)](../../actions/workflows/deploy.yml)
+
+---
 © 2025 Brian Tsai Consulting
