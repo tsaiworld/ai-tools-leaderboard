@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Tools Leaderboard – Brian Tsai</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>AI Tools Leaderboard – Brian Tsai Consulting</h1>
+      <div class="small">Portrait layout · Ready to print to 1 page</div>
+      <div class="small">Last updated: <span id="ts"></span></div>
+      <ul id="criteria" class="crit"></ul>
+    </div>
+    <div>
+      <span class="badge">LLM</span>
+      <span class="badge">Image</span>
+      <span class="badge">Video</span>
+      <span class="badge">Audio</span>
+      <span class="badge">Multi‑Modal</span>
+    </div>
+  </div>
+
+  <div id="content"></div>
+
+  <div class="footer">AI Ecosystem Report – Brian Tsai Consulting © 2025</div>
+
+  <script>
+  async function main(){
+    const res = await fetch('leaderboard.json?_=1760558303');
+    const data = await res.json();
+    document.getElementById('ts').textContent = data.timestamp;
+    const crit = document.getElementById('criteria');
+    data.criteria.forEach(c => {
+      const li = document.createElement('li'); li.textContent = c; crit.appendChild(li);
+    });
+    const root = document.getElementById('content');
+    data.categories.forEach(cat => {
+      const section = document.createElement('div'); section.className='section';
+      section.innerHTML = `<h2>${cat.name}</h2>`;
+      const table = document.createElement('table');
+      table.innerHTML = `
+        <thead>
+          <tr>
+            <th class="rank">Rank</th>
+            <th class="tool">Tool</th>
+            <th class="best">Best For</th>
+            <th class="new">What's New</th>
+            <th class="hl">Highlights (Pro / Con)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>`;
+      const tbody = table.querySelector('tbody');
+      cat.rows.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="rank">${r.rank}</td>
+          <td class="tool"><strong>${r.tool}</strong></td>
+          <td class="best">${r.bestFor}</td>
+          <td class="new">${r.whatsNew}</td>
+          <td class="hl">${r.highlights}</td>`;
+        tbody.appendChild(tr);
+      });
+      section.appendChild(table);
+      root.appendChild(section);
+    });
+  }
+  main();
+  </script>
+</body>
+</html>
